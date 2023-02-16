@@ -54,7 +54,7 @@ function arifmetic(num1, num2, operation) {
             result = del(num1, num2);
             break;
         default:
-            result = "Проверьте вводимые данные";
+            throw new Error("Проверьте вводимые данные");
     }
     return result;
 }
