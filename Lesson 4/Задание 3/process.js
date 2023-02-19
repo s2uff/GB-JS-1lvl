@@ -1,28 +1,25 @@
-let process = {
-    ask() {
-        let score = 0;
-        for (let n = 0; n < rightAnswers.length; n++) {
-            let answer = Number(prompt(questions[n]));
-            let rightAnswer = rightAnswers[n];
-            if (answer !== 1 && answer !== 2 && answer !== 3 && answer !== 4) {
-                alert("Ответ не принимается!\nОтвет должен содержать номер ответа (1, 2, 3 или 4)!");
-                n--;
-                continue;
-            }
-            if (answer == rightAnswer) {
-                alert("Угадал!");
-                score++
-                if (!(n === rightAnswers.length-1)) {
-                    let continueGame = confirm("Продолжаем игру?");
-                    if (continueGame === false){
-                        break;
-                    }
-                }
-            } else {
-                alert("Вы ввели неверный ответ((");
-            }
-
+function asker() {
+    let score = 0; //счетчик оков
+    for (let n = 0; n < rightAnswers.length; n++) { // Цикл задает вопросы пока они есть в массиве вопросов
+        let answer = Number(prompt(questions[n])); // Просим пользователя ввести ответ на вопрос
+        if (answer !== 1 && answer !== 2 && answer !== 3 && answer !== 4) { // Проверяем соответствие введенного ответа доступным значениям
+            alert("Ответ не принимается!\nОтвет должен содержать номер ответа (1, 2, 3 или 4)!"); // Если введено некорректное значение
+            n--; // Откатываем счетчик что бы заново запустить этот же вопрос
+            continue; // Перезапускаем цикл
         }
-        alert("Твой счет: " + score);
+        if (answer == rightAnswers[n]) { // Проверяем правильность ответа
+            alert("Угадал!"); // Если угадал
+            score++; // Увеличиваем счетчик очков
+            if (!(n === rightAnswers.length-1)) { // Если вопрос не был последним из массива
+                let continueGame = confirm("Продолжаем игру?"); // Спрашиваем готов ли пользователь продолжить игру
+                if (continueGame === false){ // Если отказывается, то прерываем цикл
+                    break; // Прерываем цикл задавания вопросов
+                }
+            }
+        } else { // Если ответ неверный
+            alert("Вы ввели неверный ответ(("); // Выводим сообщение о неверном ответе
+        }
+
     }
+        alert("Твой счет: " + score); // Когда отработал цикл (закончились вопросы или пользователь не захотел играть дальше) выводим счет
 }
