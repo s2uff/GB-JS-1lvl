@@ -1,0 +1,75 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+@keyframes modalMagic {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes modalMagicReverse {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.modal-open{
+    width: 200px;
+    height: 30px;
+}
+
+.modal {
+    position: absolute;
+    top: 90%;
+    left: 28%;
+
+    width: 400px;
+    height: 80px;
+    padding: 20px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.modal-close {
+    width: 80px;
+    height: 30px;
+}
+
+.displayForModal {
+    display: flex;
+    animation: modalMagic 1s 1;
+}
+
+.scaleBack {
+    display: flex;
+    animation: modalMagicReverse 1s 1;
+}

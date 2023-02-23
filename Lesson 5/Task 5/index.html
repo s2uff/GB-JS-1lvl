@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="form" action="#">
+        <label for="name" class="label">Ваше имя:</label>
+        <input class="input" id="name" type="text" placeholder="Введите имя" required>
+        <div class="comment">Допустимая длинна 1-50 символ.</div>
+
+        <label for="phone" class="label">Ваш номер телефона:</label>
+        <input class="input" id="phone" type="tel" placeholder="Введите номер телефона" required>
+        <div class="comment">Номер телефона должен состоять из 11 символов.</div>
+
+        <label for="password1" class="label">Пароль:</label>
+        <input class="input" id="password1" type="password" placeholder="Введите пароль" required>
+        <div class="comment">Допустимая длинна 5-20 символ.</div>
+        <div class="comment">Пароли не совпадают!</div>
+
+        <label for="password2" class="label">Повторите пароль:</label>
+        <input class="input" id="password2" type="password" placeholder="Повторите пароль" required>
+
+        <div class="buttons">
+            <input type="reset" class="reset button">
+            <input type="submit" class="submit button">
+        </div>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
