@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes toRight {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes toLeft {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+.sliderContainer {
+    margin: 0 auto;
+    width: 800px;
+    height: 450px; /* В учебных целях */
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.slide:nth-child(1) {
+    background-image: url("../img/audi.jpeg");
+}
+
+.slide:nth-child(2) {
+    background-image: url("../img/mercedes.jpg");
+}
+
+.slide:nth-child(3) {
+    background-image: url("../img/bmw.jpg");
+}
+
+.arrows {
+    position: absolute;
+    top: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: white;
+    z-index: 4;
+    opacity: 0.3;
+    border: none;
+
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 1000;
+
+    transition: 0.3s ease-in-out;
+}
+
+.leftArrow {
+    left: 8%;
+}
+
+.rightArrow {
+    right: 8%;
+}
+
+.arrows:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.arrows:active {
+    opacity: 0.5;
+    transform: scale(1);
+}
+
+/* Стили для эффектов JS */
+
+.hidden {
+    visibility: hidden;
+}
+
+.zIndex0 {
+    z-index: 0;
+}
+
+.zIndex1 {
+    z-index: 1;
+}
+
+.zIndex2 {
+    z-index: 2;
+}
+
+.toRightAni {
+    animation: toRight 1s 1;
+}
+
+.toLeftAni {
+    animation: toLeft 1s 1;
+}
