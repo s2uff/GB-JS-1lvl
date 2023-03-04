@@ -1,0 +1,231 @@
+/* Анимации */
+@keyframes bagOpening {
+    0% {
+        transform: translateY(-500px) translateX(200px);
+    }
+    100% {
+        transform: translateY(0px) translateX(0);
+    }
+}
+
+@keyframes bagClosing {
+    0% {
+        transform: translateY(0px) translateX(0);
+    }
+    100% {
+        transform: translateY(-500px) translateX(200px);
+    }
+}
+
+/* Стили для Header */
+body {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-color: grey;
+
+    position: relative;
+}
+
+.logo {
+    display: block;
+    width: 32px;
+    height: 28px;
+    background-image: url("img/logo.png");
+    background-size: contain;
+    transition: 0.3s ease-in-out;
+}
+
+.bag {
+    width: 18px;
+    height: 24px;
+    background-color: transparent;
+    background-image: url("img/bag.png");
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover,
+.bag:hover {
+    transform: scale(1.1);
+}
+
+.logo:active,
+.bag:active {
+    transform: scale(1);
+}
+
+/* Стили для корзины */
+
+.shoppingBag {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    position: absolute;
+    top: 48px;
+    right: 51px;
+
+    width: 300px;
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.shoppingBag-heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.shoppingBag-total {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-top: 20px;
+}
+
+.shoppingBag-totalAmount {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    margin-top: 20px;
+}
+
+.table-head {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+
+    border-bottom: 1px solid grey;
+}
+
+.table-number {
+    width: 25px;
+}
+
+.table-name {
+    width: 120px;
+}
+
+.table-count {
+    width: 40px;
+}
+
+.table-price {
+    width: 90px;
+}
+
+.table-deleters {
+    width: 25px;
+}
+
+.delete {
+    background-color: transparent;
+    border: none;
+    background-image: url("img/delete.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 10px;
+    height: 10px;
+}
+
+td {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+/* Стили для карточек товаров */
+.products {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.product-name{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.product-price {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight:600;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.buyBtn {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 3px;
+
+    background-color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.buyBtn:hover{
+    background-color: white;
+    color: black;
+}
+
+.buyBtn:active{
+    transform: scale(0.9);
+}
+
+
+/* Классы для эффектов JS */
+.displayNone {
+    display: none;
+}
+
+.bagOpen {
+    animation: bagOpening 1s 1;
+}
+
+.bagClose {
+    animation: bagClosing 1s 1;
+}
