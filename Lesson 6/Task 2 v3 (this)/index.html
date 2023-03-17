@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="main-header">
+    <a href="#" class="logo"></a>
+    <button class="bag"></button>
+    <div class="shoppingBag displayNone">
+        <span class="shoppingBag-heading">Ваша корзина</span>
+        <table>
+            <tbody>
+            <tr>
+                <th class="table-head table-number">#</th>
+                <th class="table-head table-name">Наименование</th>
+                <th class="table-head table-count">Кол-во</th>
+                <th class="table-head table-price">Цена</th>
+                <th class="table-head table-deleters"></th>
+            </tr>
+            </tbody>
+        </table>
+        <span class="shoppingBag-total">Итого товаров на сумму: <span class="shoppingBag-totalAmount"></span></span>
+    </div>
+</header>
+<main class="products"></main>
+<script src="scripts/products.js"></script>
+<script src="scripts/shoppingBag.js"></script>
+</body>
+</html>
